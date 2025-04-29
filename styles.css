@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: 
+        url(images/bg-pattern-top-desktop.svg),
+        url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 
+        0px 0px, 100% 100%,
+        left top, right bottom;
+    max-height: 1000dvh;
+    font-family: 'League Spartan';
+    font-size: 1.125rem;
+    line-height: 1.563rem;
+    letter-spacing: -0.001rem;
+    color: var(--dark-grayish-magenta);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 118px 0 53px 0;
+    display: grid;
+        grid-template-columns: 411px 159px 540px;
+        grid-template-rows: 245px 71px 266px;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+}
+        
+.heading-section {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 26px
+}
+
+.heading {
+    color: var(--very-dark-magenta);
+    font-size: 3.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.10rem;
+}
+
+/*RATINGS SECTION*/
+.ratings-section {
+    grid-area: 1 / 3 / 2 / 4;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 0.938rem;
+    letter-spacing: 0.028rem;
+    padding: 27px 0 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 48px) 350px 48px 46px;
+    grid-template-rows: repeat(3, 56px);
+    grid-row-gap: 16px;
+}
+
+.ratings {
+    background-color: var(--light-grayish-magenta);
+    color: var(--very-dark-magenta);
+    border-radius: 8px;
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.ratings:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.ratings:nth-of-type(2) { 
+    grid-area: 2 / 2 / 3 / 5; 
+}
+.ratings:nth-of-type(3) { 
+    grid-area: 3 / 3 / 4 / 6; 
+}
+
+.ratings-text {
+    font-size: 1rem;
+}
+
+.stars {
+    height: 16px;
+    display: flex;
+    gap: 8px
+}
+
+/*TESTIMONIALS SECTION*/
+.testimonials-section {
+    grid-area: 3 / 1 / 4 / 4;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.017rem;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 16px) 202px repeat(2, 16px);
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;  
+
+}
+
+.testimonial {
+    background-color: var(--very-dark-magenta);
+    color: var(--light-grayish-magenta);
+    border-radius: 8px;
+    padding: 40px 32px 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.testimonial:nth-of-type(1) { 
+    grid-area: 1 / 1 / 4 / 2; 
+}
+.testimonial:nth-of-type(2) { 
+    grid-area: 2 / 2 / 5 / 3; 
+}
+.testimonial:nth-of-type(3) { 
+    grid-area: 3 / 3 / 6 / 4; 
+}
+
+.profile {
+    line-height: 0.938rem;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.profile-icon {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0 1px 0;
+    gap: 5px;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+}
+
+.profile-title {
+    color: var(--soft-pink);
+    letter-spacing: 0.025rem;
+}
+
+@media only screen and (max-width: 1125px) {
+    body {
+        background-image: 
+            url(images/bg-pattern-top-mobile.svg),
+            url(images/bg-pattern-bottom-mobile.svg);
+        background-size: 100%;
+        font-size: 1.125rem;
+        line-height: 1.563rem;
+        letter-spacing: -0.001rem;
+    }
+    
+    main {
+        padding: 82px 24px 99px;
+        display: block;
+    }
+    
+    .heading-section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 23px
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+        line-height: 2rem;
+        letter-spacing: -0.085rem;
+    }
+    
+    /*RATINGS SECTION*/
+    .ratings-section {
+        line-height: 0.938rem;
+        letter-spacing: 0.028rem;
+        display: flex;
+        flex-direction: column;
+        padding: 39px 0 48px 0;
+    }
+    
+    .ratings {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    /*TESTIMONIALS SECTION*/
+    .testimonials-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
